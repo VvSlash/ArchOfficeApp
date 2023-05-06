@@ -5,6 +5,7 @@
 #include <string>
 #include <ctime>
 #include <list>
+#include <fstream>
 #include "time.h"
 #include "Finanse.h"
 #include "GlownyProjektant.h"
