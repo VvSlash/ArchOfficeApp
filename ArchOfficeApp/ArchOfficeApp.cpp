@@ -79,6 +79,8 @@ int main()
 							std::string nazwa, opis;
 							double cena;
 
+							std::cin.ignore();
+
 							std::cout << "Podaj nazwę projektu: ";
 							std::getline(std::cin, nazwa);
 							std::cout << "Podaj opis projektu: ";
@@ -99,6 +101,7 @@ int main()
 									std::cout << "Opis projektu: " << projekt.getOpis() << std::endl;
 									std::cout << "Cena projektu: " << projekt.getCena() << std::endl;
 									std::cout << "-------------------------" << std::endl;
+									i++;
 								}
 								std::cout << "============================" << std::endl;
 								std::cout << ".. Wybierz projekt do edycji" << std::endl;
@@ -111,10 +114,12 @@ int main()
 									std::string nowaNazwa, nowyOpis;
 									double nowaCena;
 
+									std::cin.ignore();
+
 									std::cout << "Podaj nazwę projektu: ";
-									std::cin >> nowaNazwa;
+									std::getline(std::cin, nowaNazwa);
 									std::cout << "Podaj opis projektu: ";
-									std::cin >> nowyOpis;
+									std::getline(std::cin, nowyOpis);
 									std::cout << "Podaj cenę projektu: ";
 									std::cin >> nowaCena;
 									klient.edytujProjekt(projekty[wybor2], nowaNazwa, nowyOpis);
@@ -179,6 +184,7 @@ int main()
 									std::cout << "Opis projektu: " << projekt.getOpis() << std::endl;
 									std::cout << "Cena projektu: " << projekt.getCena() << std::endl;
 									std::cout << "-------------------------" << std::endl;
+									i++;
 								}
 								std::cout << "============================" << std::endl;
 								std::cout << ".. Wybierz projekt do edycji" << std::endl;
@@ -310,10 +316,12 @@ int main()
 										std::string nowaNazwa, nowyOpis;
 										double nowaCena;
 
+										std::cin.ignore();
+
 										std::cout << "Podaj nazwę projektu: ";
-										std::cin >> nowaNazwa;
+										std::getline(std::cin, nowaNazwa);
 										std::cout << "Podaj opis projektu: ";
-										std::cin >> nowyOpis;
+										std::getline(std::cin, nowyOpis);
 										std::cout << "Podaj cenę projektu: ";
 										std::cin >> nowaCena;
 										koordynator.edytujProjekt(projekty[wybor2], nowaNazwa, nowyOpis);
@@ -382,6 +390,7 @@ int main()
 									std::cout << "Opis projektu: " << projekt.getOpis() << std::endl;
 									std::cout << "Cena projektu: " << projekt.getCena() << std::endl;
 									std::cout << "-------------------------" << std::endl;
+									i++;
 								}
 								std::cout << "============================" << std::endl;
 								std::cout << ".. Wybierz projekt do edycji" << std::endl;
