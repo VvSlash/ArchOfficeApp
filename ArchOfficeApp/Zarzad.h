@@ -1,6 +1,6 @@
 #ifndef ZARZAD_H
 #define ZARZAD_H
-
+#include <string>
 class Zarzad {
 
 private:

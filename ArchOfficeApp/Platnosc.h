@@ -1,6 +1,6 @@
 #ifndef PLATNOSC_H
 #define PLATNOSC_H
-
+#include <ctime>
 class Platnosc {
 
 private:

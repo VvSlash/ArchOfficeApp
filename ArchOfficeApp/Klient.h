@@ -1,6 +1,6 @@
 #ifndef KLIENT_H
 #define KLIENT_H
-
+#include <string>
 class Klient {
 
 private:

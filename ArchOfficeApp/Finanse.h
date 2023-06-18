@@ -1,3 +1,4 @@
+#include <ctime>
 #ifndef FINANSE_H
 #define FINANSE_H
 

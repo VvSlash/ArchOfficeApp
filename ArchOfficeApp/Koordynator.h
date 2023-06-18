@@ -1,6 +1,6 @@
 #ifndef KOORDYNATOR_H
 #define KOORDYNATOR_H
-
+#include "Zarzad.h"
 class Koordynator : Zarzad {
 
 
