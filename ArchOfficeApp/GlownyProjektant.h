@@ -5,8 +5,8 @@ class GlownyProjektant : public Zarzad {
 	//cpos
 
 public:
-    GlownyProjektant(const std::string& username, const std::string& password, const std::string& email, int age)
-        : Zarzad(username, password, email, age) {}
+    GlownyProjektant(const std::string& username, const std::string& password, const std::string& email)
+        : Zarzad(username, password, email) {}
 
     void zatwierdzProjekt(Projekt& projekt) {
         projekt.setStatus("Zatwierdzony");

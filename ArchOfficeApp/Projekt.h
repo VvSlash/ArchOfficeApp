@@ -7,11 +7,12 @@ private:
     std::string nazwa;
     std::string opis;
     std::string status;
+    std::string priorytet;
     double cena;
 
 public:
     Projekt(const std::string& nazwa, const std::string& opis, double cena)
-        : nazwa(nazwa), opis(opis), status("W trakcie"), cena(cena) {}
+        : nazwa(nazwa), opis(opis), status("Utworzony"), cena(cena) {}
 
     std::string getNazwa() const {
         return nazwa;
@@ -31,6 +32,9 @@ public:
 
     void setStatus(const std::string& nowyStatus) {
         status = nowyStatus;
+    }
+    void setPriorytet(const std::string& nowyPriorytet) {
+        priorytet = nowyPriorytet;
     }
 
     void setNazwa(const std::string& nowaNazwa) {

@@ -9,45 +9,45 @@ private:
 	std::string nazwa;
 	double przychody;
 	double wydatki;
-	bool zalogowany;
 public:
-	Zarzad(const std::string& username, const std::string& password, const std::string& email, int age)
-		: Uzytkownik(username, password, email, age) {}
+	Zarzad(const std::string& username, const std::string& password, const std::string& email)
+		: Uzytkownik(username, password, email) {}
 
 	void edytujProjekt(Projekt& projekt, const std::string& nowaNazwa, const std::string& nowyOpis) {
-		projekt.setNazwa(nowaNazwa);
-		projekt.setOpis(nowyOpis);
-		std::cout << "Projekt zosta³ zaktualizowany." << std::endl;
+		if (zalogowany) {
+			projekt.setNazwa(nowaNazwa);
+			projekt.setOpis(nowyOpis);
+			std::cout << "Projekt zosta³ zaktualizowany." << std::endl;
+		}
+		else {
+			std::cout << "B³¹d: U¿ytkownik nie jest zalogowany." << std::endl;
+		}
 	}
-
-	void dodajPrzychod(double kwota) {
-		przychody += kwota;
-		std::cout << "Dodano przychód w wysokoœci: " << kwota << std::endl;
+	void zmienStatusProjektu(Projekt& projekt, const std::string& nowyStatus) {
+		projekt.setStatus(nowyStatus);
+		std::cout << "Status projektu zosta³ zmieniony." << std::endl;
 	}
-
-	void dodajWydatek(double kwota) {
-		wydatki += kwota;
-		std::cout << "Dodano wydatek w wysokoœci: " << kwota << std::endl;
+	void zmienPriorytetProjektu(Projekt& projekt, const std::string& nowyPriorytet) {
+		projekt.setPriorytet(nowyPriorytet);
+		std::cout << "Priorytet projektu zosta³ zmieniony." << std::endl;
 	}
-
-	double obliczZysk() const {
-		return przychody - wydatki;
-	}
-
-	double obliczPrzychody() const {
+	double getPrzychody() const {
 		return przychody;
 	}
 
-	double obliczWydatki() const {
+	double getWydatki() const {
 		return wydatki;
 	}
+	void setPrzychody(const double& P) {
+		przychody = P;
+	}
 
+	double setWydatki(const double& W) {
+		wydatki = W;
+	}
+	void generujZestawienie() {
 
-	void zaloguj();
-
-	bool sprawdzPoprawnoscDanych(const std::string& login, const std::string& haslo);
-
-	void wyloguj();
+	}
 
 	void edytuj();
 };
