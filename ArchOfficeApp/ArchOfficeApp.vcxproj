@@ -140,24 +140,30 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ArchOfficeApp.cpp" />
+    <ClCompile Include="BiuroArchitektoniczne.cpp" />
     <ClCompile Include="Finanse.cpp" />
     <ClCompile Include="GlownyProjektant.cpp" />
     <ClCompile Include="Karta.cpp" />
     <ClCompile Include="Klient.cpp" />
     <ClCompile Include="Koordynator.cpp" />
     <ClCompile Include="Platnosc.cpp" />
+    <ClCompile Include="Projekt.cpp" />
     <ClCompile Include="Przelew.cpp" />
+    <ClCompile Include="Uzytkownik.cpp" />
     <ClCompile Include="Zarzad.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BiuroArchitektoniczne.h" />
     <ClInclude Include="Finanse.h" />
     <ClInclude Include="GlownyProjektant.h" />
     <ClInclude Include="Karta.h" />
     <ClInclude Include="Klient.h" />
     <ClInclude Include="Koordynator.h" />
     <ClInclude Include="Platnosc.h" />
+    <ClInclude Include="Projekt.h" />
     <ClInclude Include="Przelew.h" />
     <ClInclude Include="Temat.h" />
+    <ClInclude Include="Uzytkownik.h" />
     <ClInclude Include="Zarzad.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

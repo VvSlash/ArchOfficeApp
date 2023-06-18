@@ -16,9 +16,45 @@
 #include "Przelew.h"
 #include "Temat.h"
 #include "Zarzad.h"
+#include <vector>
+#include "BiuroArchitektoniczne.h"
+
+struct UserRecord {
+    std::string username;
+    std::string password;
+    std::string email;
+    int age;
+    bool isAdmin;
+};
+
 int main()
 {
-    std::cout << "Hello World!\n";
+    std::vector<Projekt> projekty;
+
+    GlownyProjektant projektant("projektant1", "haslo1", "projektant1@example.com", 40);
+    Koordynator koordynator("koordynator1", "haslo2", "koordynator1@example.com", 35);
+    Klient klient("klient1", "haslo3", "klient1@example.com", 30);
+
+    klient.wyslijNowyProjekt("Projekt 1", "Opis projektu 1", 5000.0, projekty);
+
+    if (projekty.size() > 0) {
+        projektant.zatwierdzProjekt(projekty[0]);
+        koordynator.zmienStatusProjektu(projekty[0], "W realizacji");
+        projektant.edytujProjekt(projekty[0], "Projekt 1 (zmieniony)", "Zmieniony opis projektu 1");
+
+        projektant.dodajPrzychod(projekty[0].getCena() * 0.8);
+        projektant.dodajWydatek(projekty[0].getCena() * 0.3);
+
+        BiuroArchitektoniczne biuro(1000.0);
+        biuro.dodajKoszt(500.0);
+
+        double przychody = projektant.obliczPrzychody();
+        double wydatki = projektant.obliczWydatki();
+
+        std::cout << "Zysk: " << biuro.obliczZysk(przychody, wydatki) << std::endl;
+    }
+
+    return 0;
 }
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania

@@ -1,10 +1,5 @@
 #include "Klient.h"
 
-Klient::Klient() {
-	// TODO - implement Klient::Klient
-	throw "Not yet implemented";
-}
-
 void Klient::zaloguj() {
 	// TODO - implement Klient::zaloguj
 	throw "Not yet implemented";
