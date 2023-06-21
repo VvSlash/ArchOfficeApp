@@ -18,9 +18,10 @@
 #include "Zarzad.h"
 #include <vector>
 #include "BiuroArchitektoniczne.h"
-
+#include <locale.h>
 int main()
 {
+	setlocale(LC_CTYPE, "Polish");
 	//Baza projektów
 	std::vector<Projekt> projekty;
 	std::vector<Klient> klienci;
